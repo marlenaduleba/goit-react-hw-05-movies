@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import {
   SearchForm,
@@ -9,7 +9,7 @@ import {
   SearchFormInput,
 } from './Searchbar.styled';
 
-export const Searchbar = ({ onSubmit }) => {
+const Searchbar = ({ onSubmit }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('name') ?? '';
 
@@ -44,4 +44,8 @@ export const Searchbar = ({ onSubmit }) => {
   );
 };
 
-// Searchbar.propTypes = {};
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
+
+export default Searchbar;
