@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { api } from 'service/api';
+
 import { ImagePlaceholder } from 'components/ImagePlaceholder/ImagePlaceholder';
-// import PropTypes from 'prop-types';
+
 
 function Reviews() {
   const [reviews, setReviews] = useState({});
@@ -45,6 +47,6 @@ function Reviews() {
   );
 }
 
-// Cast.propTypes = {};
+
 
 export default Reviews;

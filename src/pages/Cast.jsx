@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { api } from 'service/api';
+
 import { ImagePlaceholder } from 'components/ImagePlaceholder/ImagePlaceholder';
-// import PropTypes from 'prop-types';
+
 
 function Cast() {
   const [cast, setCast] = useState({});
@@ -41,6 +43,6 @@ function Cast() {
   );
 }
 
-// Cast.propTypes = {};
+
 
 export default Cast;
