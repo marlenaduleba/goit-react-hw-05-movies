@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { api } from 'service/api';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 
