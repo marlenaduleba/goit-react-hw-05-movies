@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 
 import Header from 'components/Header/Header';
@@ -34,7 +35,9 @@ const Layout = () => {
           </Navigation>
         </Container>
       </Header>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };

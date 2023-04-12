@@ -1,5 +1,5 @@
 import Container from 'components/Container/Container';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useParams, useLocation, Outlet } from 'react-router-dom';
 
 import { api } from 'service/api';
@@ -79,7 +79,9 @@ const MovieDetails = () => {
             </li>
           </MoreButtonList>
         </MoreInfoBox>
-        <Outlet />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </Container>
     </main>
   );
