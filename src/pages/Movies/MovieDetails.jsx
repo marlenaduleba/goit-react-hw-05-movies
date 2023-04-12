@@ -72,10 +72,14 @@ const MovieDetails = () => {
           <MoreInfoTitle>Additional information</MoreInfoTitle>
           <MoreButtonList>
             <li>
-              <LinkButton to="cast">Cast</LinkButton>
+            <LinkButton to="cast" state={{ from: backLocation }}>
+                Cast
+              </LinkButton>
             </li>
             <li>
-              <LinkButton to="reviews">Reviews</LinkButton>
+            <LinkButton to="reviews" state={{ from: backLocation }}>
+                Reviews
+              </LinkButton>
             </li>
           </MoreButtonList>
         </MoreInfoBox>
