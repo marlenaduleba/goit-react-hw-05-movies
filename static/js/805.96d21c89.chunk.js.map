@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/805.96d21c89.chunk.js","mappings":"2JAIE,UAJe,kBACb,gBAAKA,MAAM,MAAMC,IAAI,uBAAuBC,IAAI,wBADnC,C","sources":["pages/NotFound.jsx"],"sourcesContent":["const NotFound = () => (\n    <img width=\"500\" src=\"https://http.cat/404\" alt=\"Error 404. Not Found\" />\n  );\n  \n  export default NotFound;"],"names":["width","src","alt"],"sourceRoot":""}
