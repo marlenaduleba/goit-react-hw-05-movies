@@ -18,7 +18,7 @@ export const fetchFilms = async () => {
 export const fetchFilmById = async id => {
   try {
     const url = `${BASE_URL}/movie/${id}?api_key=${API_KEY}`;
-    const { data } = await axios.get(url);
+    const  data  = await axios.get(url);
 
     return data;
   } catch (error) {
@@ -30,9 +30,9 @@ export const fetchFilmById = async id => {
 export const fetchFilmsByName = async filmName => {
   try {
     const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${filmName}`;
-    const { data } = await axios.get(url);
+    const  data  = await axios.get(url);
 
-    return data.results;
+    return data;
   } catch (error) {
     console.error(error);
   }
@@ -41,9 +41,9 @@ export const fetchFilmsByName = async filmName => {
   export const fetchFilmCast = async id => {
     try {
       const url = `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}`;
-      const { data } = await axios.get(url);
+      const  data  = await axios.get(url);
   
-      return data.cast.splice(0, 15);
+      return data;
     } catch (error) {
       console.error(error);
     }
@@ -52,9 +52,9 @@ export const fetchFilmsByName = async filmName => {
   export const fetchFilmReviews = async id => {
     try {
       const url = `${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}`;
-      const { data } = await axios.get(url);
+      const  data  = await axios.get(url);
   
-      return data.results;
+      return data;
     } catch (error) {
       console.error(error);
     }
