@@ -19,7 +19,7 @@ const Link = styled(NavLink)`
   font-weight: 500;
   &.active {
     color: white;
-    background-color: tomato;
+    background-color: #FF6700;
   }
 `;
 
