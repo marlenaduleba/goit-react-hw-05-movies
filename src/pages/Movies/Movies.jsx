@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { api } from 'service/api';
 
 import MovieList from 'components/Movie/MovieList/MovieList';
-//import { Searchbar } from '';
+import { Searchbar } from 'components/Searchbar/Searchbar';
 import Container from '../../components/Container/Container';
 
 export const Movies = () => {
