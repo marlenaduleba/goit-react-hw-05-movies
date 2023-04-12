@@ -50,18 +50,21 @@ const MovieDetails = () => {
             src={ImagePlaceholder(film.poster_path)}
             alt={film.title}
           />
-          <InfoBox>
-            <Title>{film.title}</Title>
+            <InfoBox>
+            <Title>{film.title ? film.title : 'No Info'}</Title>
             <Text>
-              <TitleText>User Score: </TitleText> {film.popularity}
+              <TitleText>User Score: </TitleText>{' '}
+              {film.popularity ? film.popularity : 0}
             </Text>
             <Text>
               <TitleText>Overview: </TitleText>
-              {film.overview}
+              {film.overview ? film.overview : 'No Info'}
             </Text>
             <Text>
               <TitleText>Genres: </TitleText>
-              {film.genres && film.genres.map(value => value.name).join(', ')}
+              {film.genres.length > 0
+                ? film.genres.map(value => value.name).join(', ')
+                : 'No Info'}
             </Text>
           </InfoBox>
         </Box>
