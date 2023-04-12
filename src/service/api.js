@@ -5,17 +5,17 @@ const instance = axios.create({
   params: {
     api_key: '96b1936b39533cd9542a6bf2c841f4c7',
   },
-});
-const fetchFilms = async () => await instance.get(`/trending/movie/day`);
+})
+const fetchFilms =  () =>  instance.get(`/trending/movie/day`);
 
 const fetchFilmsByName = async query =>
-  await instance.get(`/search/movie`, { params: { query } });
+   instance.get(`/search/movie`, { params: { query } });
 
-const fetchFilmById = async id => await instance.get(`/movie/${id}`);
+const fetchFilmById = async id =>  instance.get(`/movie/${id}`);
 
-const fetchFilmCast = async id => await instance.get(`/movie/${id}/credits`);
+const fetchFilmCast = async id =>  instance.get(`/movie/${id}/credits`);
 
-const fetchFilmReviews = async id => await instance.get(`/movie/${id}/reviews`);
+const fetchFilmReviews = async id =>  instance.get(`/movie/${id}/reviews`);
 
 export const api = {
   fetchFilms,
