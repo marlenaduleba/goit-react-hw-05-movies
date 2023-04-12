@@ -30,9 +30,13 @@ const MovieDetails = () => {
   const backLocation = location.state?.from ?? '/';
 
   useEffect(() => {
-    api.fetchFilmById(id).then(({ data }) => {
-      setFilm(data);
-    });
+    try {
+      api.fetchFilmById(id).then(({ data }) => {
+        setFilm(data);
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }, [id]);
 
   if (Object.keys(film).length === 0) {
