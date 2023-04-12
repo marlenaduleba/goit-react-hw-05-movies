@@ -5,7 +5,7 @@ import { Title } from './Home.styled';
 
 import { api } from 'service/api';
 
-export const Home = () => {
+ const Home = () => {
   const [films, setFilms] = useState([]);
 
   useEffect(() => {

@@ -7,7 +7,7 @@ import { ImagePlaceholder } from 'components/ImagePlaceholder/ImagePlaceholder';
 import { List, Item, Info } from './Cast.styled';
 
 
-function Cast() {
+const Cast = () => {
   const [cast, setCast] = useState({});
 
   const { id } = useParams();
@@ -42,7 +42,7 @@ function Cast() {
       </List>
     </>
   );
-}
+};
 
 
 

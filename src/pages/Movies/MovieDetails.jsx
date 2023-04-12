@@ -21,7 +21,7 @@ import {
   LinkButton,
 } from './Movies.styled';
 
-function MovieDetails() {
+const MovieDetails = () => {
   const [film, setFilm] = useState({});
 
   const { id } = useParams();
@@ -80,6 +80,6 @@ function MovieDetails() {
       </Container>
     </main>
   );
-}
+};
 
 export default MovieDetails;
