@@ -1,11 +1,25 @@
 import Container from 'components/Container/Container';
 import { useState, useEffect } from 'react';
-import { NavLink, useParams, useLocation, Outlet } from 'react-router-dom';
+import { useParams, useLocation, Outlet } from 'react-router-dom';
 
 import { api } from 'service/api';
 
 
 import { ImagePlaceholder } from 'components/ImagePlaceholder/ImagePlaceholder';
+
+import {
+  Box,
+  LinkIcon,
+  Icon,
+  InfoBox,
+  Title,
+  Text,
+  TitleText,
+  MoreInfoBox,
+  MoreInfoTitle,
+  MoreButtonList,
+  LinkButton,
+} from './Movies.styled';
 
 function MovieDetails() {
   const [film, setFilm] = useState({});
@@ -27,36 +41,42 @@ function MovieDetails() {
   return (
     <main>
       <Container>
-        <NavLink to={backLocation}> c--- Go to back</NavLink>
-        <img
-          width="250"
-          src={ImagePlaceholder(film.poster_path)}
-          alt={film.title}
-        />
-
-        <div>
-          <h2>{film.title}</h2>
-          <p>User Score: {film.popularity}</p>
-          <p>
-            <b>Overview </b>
-            {film.overview}
-          </p>
-          <p>
-            <b>Genres </b>
-            {film.genres && film.genres.map(value => value.name).join(', ')}
-          </p>
-
-          <h3>Additional information</h3>
-          <ul>
+        <LinkIcon to={backLocation}>
+          <Icon />
+        </LinkIcon>
+        <Box>
+          <img
+            width="300"
+            src={ImagePlaceholder(film.poster_path)}
+            alt={film.title}
+          />
+          <InfoBox>
+            <Title>{film.title}</Title>
+            <Text>
+              <TitleText>User Score: </TitleText> {film.popularity}
+            </Text>
+            <Text>
+              <TitleText>Overview: </TitleText>
+              {film.overview}
+            </Text>
+            <Text>
+              <TitleText>Genres: </TitleText>
+              {film.genres && film.genres.map(value => value.name).join(', ')}
+            </Text>
+          </InfoBox>
+        </Box>
+        <MoreInfoBox>
+          <MoreInfoTitle>Additional information</MoreInfoTitle>
+          <MoreButtonList>
             <li>
-              <NavLink to="cast">Cast</NavLink>
+              <LinkButton to="cast">Cast</LinkButton>
             </li>
             <li>
-              <NavLink to="reviews">Reviews</NavLink>
+              <LinkButton to="reviews">Reviews</LinkButton>
             </li>
-          </ul>
-          <Outlet />
-        </div>
+          </MoreButtonList>
+        </MoreInfoBox>
+        <Outlet />
       </Container>
     </main>
   );
