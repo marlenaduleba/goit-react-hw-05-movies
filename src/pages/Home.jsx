@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { api } from 'service/api';
+import { ImagePlaceholder } from 'components/ImagePlaceholder/ImagePlaceholder';
 
 export const Home = () => {
   const [films, setFilms] = useState([]);
@@ -27,7 +28,7 @@ export const Home = () => {
               >
                 <img
                   width="50"
-                  src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+                  src={ImagePlaceholder(poster_path)}
                   alt={title}
                 />
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { api } from 'service/api';
+import { ImagePlaceholder } from 'components/ImagePlaceholder/ImagePlaceholder';
 // import PropTypes from 'prop-types';
 
 function Reviews() {
@@ -27,13 +28,8 @@ function Reviews() {
               <img
                 width="50"
                 src={
-                  comment.author_details.avatar_path?.includes('https')
-                    ? comment.author_details.avatar_path.slice(
-                        1,
-                        comment.author_details.avatar_path.length
-                      )
-                    : `https://image.tmdb.org/t/p/w500/${comment.author_details.avatar_path}`
-                }
+                  ImagePlaceholder(comment.author_details.avatar_path)
+                 }
                 alt={comment.author}
               />
             )}
