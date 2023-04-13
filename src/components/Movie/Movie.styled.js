@@ -23,6 +23,7 @@ export const List = styled.ul`
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
+  margin-top: 20px;
 `;
 
 export const Item = styled.li`
