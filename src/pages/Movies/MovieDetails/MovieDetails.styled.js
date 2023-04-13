@@ -38,8 +38,8 @@ export const Box = styled.div`
 
 export const Title = styled.h1`
   font-size: 50px;
-  color: #C0C0C0;
-  text-shadow: 2px 2px 4px #000000;
+  color: #ff6700;
+  text-shadow: 2px 2px 4px #c0c0c0;
 `;
 
 export const InfoBox = styled.div`
