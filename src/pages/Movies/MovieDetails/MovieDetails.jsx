@@ -4,7 +4,6 @@ import { useParams, useLocation, Outlet } from 'react-router-dom';
 
 import { api } from 'service/api';
 
-
 import { ImagePlaceholder } from 'components/ImagePlaceholder/ImagePlaceholder';
 
 import {
@@ -19,7 +18,7 @@ import {
   MoreInfoTitle,
   MoreButtonList,
   LinkButton,
-} from './Movies.styled';
+} from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const [film, setFilm] = useState({});
@@ -54,7 +53,7 @@ const MovieDetails = () => {
             src={ImagePlaceholder(film.poster_path)}
             alt={film.title}
           />
-            <InfoBox>
+          <InfoBox>
             <Title>{film.title ? film.title : 'No Info'}</Title>
             <Text>
               <TitleText>User Score: </TitleText>{' '}
@@ -76,12 +75,12 @@ const MovieDetails = () => {
           <MoreInfoTitle>Additional information</MoreInfoTitle>
           <MoreButtonList>
             <li>
-            <LinkButton to="cast" state={{ from: backLocation }}>
+              <LinkButton to="cast" state={{ from: backLocation }}>
                 Cast
               </LinkButton>
             </li>
             <li>
-            <LinkButton to="reviews" state={{ from: backLocation }}>
+              <LinkButton to="reviews" state={{ from: backLocation }}>
                 Reviews
               </LinkButton>
             </li>

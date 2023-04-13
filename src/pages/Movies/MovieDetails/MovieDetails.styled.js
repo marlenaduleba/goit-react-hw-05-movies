@@ -73,6 +73,7 @@ export const MoreInfoBox = styled.div`
 
 export const MoreInfoTitle = styled.h2`
   margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 30px;
 `;
 
@@ -87,6 +88,7 @@ export const LinkButton = styled(NavLink)`
   align-items: center;
   font-weight: 500;
   text-decoration: none;
+  margin-bottom: 10px;
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid #FF6700;
