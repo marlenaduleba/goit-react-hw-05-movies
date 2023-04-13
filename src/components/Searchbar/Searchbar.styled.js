@@ -8,6 +8,9 @@ export const SearchForm = styled.form`
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
+  box-shadow: 10px 10px 5px 0px #C0C0C0;
+-webkit-box-shadow: 10px 10px 5px 0px#C0C0C0;
+-moz-box-shadow: 10px 10px 5px 0px #C0C0C0;
 `;
 
 export const SearchFormButton = styled.button`

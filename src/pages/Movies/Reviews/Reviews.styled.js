@@ -15,7 +15,7 @@ export const Item = styled.li`
   justify-content: start;
   gap: 20px;
   padding: 10px;
-  border: 1px solid darkred;
+  border: 1px solid #C0C0C0;
   border-radius: 5px;
 `;
 
