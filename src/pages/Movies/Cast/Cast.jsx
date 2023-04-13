@@ -30,8 +30,9 @@ const Cast = () => {
     {cast.map(person => (
       <Item key={person.id}>
         <img
-          width="100"
-          src={ImagePlaceholder(person.profile_path)}
+          width="154"
+          height="154"
+          src={ImagePlaceholder(person.profile_path, 154)}
           alt={person.original_name}
         />
         <Info>
